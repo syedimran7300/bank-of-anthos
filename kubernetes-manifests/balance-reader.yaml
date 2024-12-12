@@ -20,6 +20,7 @@ metadata:
     environment: development
     team: ledger
     tier: backend
+  namespace: bank
   name: balancereader
 spec:
   ports:
@@ -42,6 +43,7 @@ metadata:
     environment: development
     team: ledger
     tier: backend
+  namespace: bank
   name: balancereader
 spec:
   selector:
