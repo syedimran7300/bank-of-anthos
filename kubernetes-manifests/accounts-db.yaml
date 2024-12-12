@@ -26,6 +26,7 @@ metadata:
     environment: development
     team: accounts
     tier: db
+  namespace: bank
   name: accounts-db-config
 ---
 apiVersion: v1
@@ -36,6 +37,7 @@ metadata:
     environment: development
     team: accounts
     tier: db
+  namespace: bank
   name: accounts-db
 spec:
   ports:
@@ -59,6 +61,7 @@ metadata:
     environment: development
     team: accounts
     tier: db
+  namespace: bank
   name: accounts-db
 spec:
   replicas: 1
