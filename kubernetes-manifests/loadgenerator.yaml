@@ -18,25 +18,25 @@ metadata:
   namespace: bank
   labels:
     environment: development
-    team: loadgenerator_demo
+    team: loadgenerator-demo
     tier: test
-  name: loadgenerator_demo
+  name: lloadgenerator-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: loadgenerator_demo
+      app: loadgenerator-demo
       environment: development
-      team: loadgenerator_demo
+      team: loadgenerator-demo
       tier: test
   template:
     metadata:
       annotations:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
       labels:
-        app: loadgenerator_demo
+        app: loadgenerator-demo
         environment: development
-        team: loadgenerator_demo
+        team: loadgenerator-demo
         tier: test
     spec:
       containers:
@@ -48,7 +48,7 @@ spec:
             - name: LOG_LEVEL
               value: error
           image: us-central1-docker.pkg.dev/bank-of-anthos-ci/bank-of-anthos/loadgenerator:v0.6.6@sha256:1bf8aea11595ba54ac87b96d6a72af41caf60bebbafbb8cd633f9a8a0c9eace7
-          name: loadgenerator_demo
+          name: loadgenerator-demo
           resources:
             limits:
               cpu: 250m
